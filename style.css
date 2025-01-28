@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 1fr;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  --primary-color: rgb(71, 179, 161);
+  --secondary-color: rgb(163, 12, 75);
+}
+
+.container {
+  display: inline-block;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  background-color: rgb(71, 179, 161);
+  padding: 5px 20px;
+  align-items: center;
+}
+
+/* 
+Getting rid of the list for phone screens,
+just leaving the flags.  */
+
+@media only screen and (max-width: 800px) {
+  .header-name {
+    display: inline;
+  }
+  .header-flag {
+    display: inline;
+    justify-content: right;
+  }
+  .header ul {
+    display: none;
+  }
+}
+
+.header .header-name {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.header nav {
+  display: grid;
+  justify-content: right;
+}
+
+.header .nav ul {
+  display: grid;
+  grid-template-columns: repeat (4, auto);
+}
+
+.header li {
+  display: inline;
+  margin: 50px;
+}
+
+.header-flag {
+  display: inline;
+  max-height: 200px;
+  max-width: 60px;
+  margin-left: 50px;
+}
+
+.header .text-shortcut {
+  padding: 3px 7px;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: white;
+  text-align: center;
+  color: rgb(26, 133, 115);
+  border-radius: 5px;
+}
+
+/* TOP BAR */
+.top-bar {
+  background-color: var(--primary-color);
+  text-align: center;
+  text-justify: bottom;
+  font-size: 3rem;
+}
+
+.top-bar ul {
+  display: grid;
+  grid-template-columns: auto;
+  display: inline;
+}
+
+.top-bar h1 {
+  color: white;
+  padding: 60px;
+}
+
+.top-bar p {
+  color: white;
+  font-size: 1.5rem;
+  padding: 60px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.top-bar #selfie {
+  display: block;
+  max-width: 500px;
+  max-height: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+/* ABOUT ME */
+.about-me {
+  text-align: center;
+  border-top: solid 10px black;
+  display: grid;
+  grid-template-rows: 50px 20px 1fr 50px 1fr;
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+.about-me ul {
+  text-align: center;
+  list-style: none;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background-color: rgba(255, 191, 203, 0.527);
+  padding: 5px;
+  border-top: solid 10px black;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+}
+
+.portfolio h2 {
+  text-align: center;
+}
+
+.portfolio .portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  padding: 10px;
+}
+
+.portfolio .portfolio-container .portfolio-box {
+  border: solid 5px var(--secondary-color);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  text-size-adjust: auto;
+  height: 1fr;
+}
+
+.portfolio .portfolio-container .portfolio-box h3 {
+  font-size: 1.5rem;
+}
+
+.portfolio .portfolio-container .portfolio-box .read-more {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.portfolio .portfolio-container .portfolio-box .github-repo {
+  text-align: center;
+}
+
+/* EXPERIEMCE */
+.experience {
+  text-align: center;
+  padding: 30px;
+  border-top: solid 10px black;
+}
+
+/* CONTACT */
+
+.contact {
+  border-top: solid 10px black;
+  text-align: center;
+  text-justify: center;
+  padding: 30px;
+}
+
+.contact ul {
+  text-align: center;
+  list-style: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--primary-color);
+  height: 50px;
+}
